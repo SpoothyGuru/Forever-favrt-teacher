@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for scroll animations
     const animationOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -67,7 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, animationOptions);
 
     const revealElements = document.querySelectorAll('.reveal-text, .reveal-element, .reveal-card');
-    revealElements.forEach(el => observer.observe(el));
+    revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.classList.add('is-visible');
+        }
+        observer.observe(el);
+    });
 
     // Parallax Effects
     const parallaxElements = document.querySelectorAll('.parallax-element');
