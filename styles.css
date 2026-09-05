@@ -1,5 +1,8 @@
+:root, html, body {
+    color-scheme: only light !important;
+}
+
 :root {
-    color-scheme: light dark;
     --bg-cream: #faf7f2;
     --bg-cream-light: #fdfbf7;
     --card-bg: #ffffff;
@@ -590,79 +593,12 @@ h1, h2, h3, h4 {
     .sub-heading { font-size: 1.4rem; }
 }
 
-/* Native Dark Mode Support */
+/* Always keep warm, elegant, light aesthetic */
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg-cream: #121316;
-        --bg-cream-light: #1a1c22;
-        --card-bg: #1e2026;
-        --coral: #ff8a80;
-        --soft-pink: #251b22;
-        --sunny-yellow: #26231a;
-        --lavender: #b39ddb;
-        --sky-blue: #38bdf8;
-        --warm-gold: #f0c05a;
-        --charcoal: #f1f5f9;
-        --charcoal-light: #94a3b8;
-        --sunset-dark: #b8432a;
-        --sunset-light: #803d2b;
-        --sunrise-dark: #7a5412;
-        --sunrise-light: #873e23;
-        --nav-bg: rgba(18, 19, 22, 0.94);
-        --nav-border: rgba(255, 255, 255, 0.1);
-    }
-
-    body {
-        background-color: #121316;
-        color: #f1f5f9;
-    }
-
-    .scrapbook-page, .paper-letter {
-        background: #1e2026 !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-        color: #f1f5f9 !important;
-    }
-
-    .scrapbook-polaroid {
-        background: #252830 !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-        color: #f1f5f9 !important;
-    }
-
-    .blurred-card {
-        background: rgba(30, 32, 38, 0.7) !important;
-        border-color: rgba(255,255,255,0.15) !important;
-        color: #f1f5f9 !important;
-    }
-
-    .btn-primary {
-        background: #f1f5f9 !important;
-        color: #121316 !important;
-    }
-
-    .btn-primary:hover {
-        background: var(--coral) !important;
-        color: #ffffff !important;
-    }
-
-    .btn-secondary {
-        border-color: #94a3b8 !important;
-        color: #f1f5f9 !important;
-    }
-
-    .btn-secondary:hover {
-        background: #f1f5f9 !important;
-        color: #121316 !important;
-    }
-
-    .card-inside {
-        background: #1e2026 !important;
-        color: #f1f5f9 !important;
-        border-color: rgba(255,255,255,0.1) !important;
-    }
-
-    .menu-toggle .bar {
-        background-color: #f1f5f9 !important;
+    :root, html, body {
+        color-scheme: only light !important;
+        background-color: var(--bg-cream) !important;
+        color: var(--charcoal) !important;
     }
 }
 
